@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+<body>
+    <p>apprendre un peu jquery</p>
+
+    <div>
+        <label for="">Valor 1</label>
+        <input type="text" id="v1"/>
+        <br>
+        <label for="">Valor 2</label>
+        <input type="text" id="v2"/>
+        <br/><br/>
+        <label for="">Resultado</label>
+        <input type="text" id="res"/>
+        <br/><br/>
+        <button id="btn_somarjs">Somar JS</button>
+        <button id="btn_somarjq">Somar JQ</button>
+    </div>
+</body>
+    <script>
+        jQuery("p").css("color","black")
+
+        //using javascript: in javascript you get the element you want to work with
+        let btn_somarjs=document.getElementById("btn_somarjs").addEventListener("click", ()=>{
+            let v1=document.getElementById("v1").value;
+            let v2=document.getElementById("v2").value;
+            let soma=parseInt(v1)+parseInt(v2);
+            let res=document.getElementById("res").value=soma;
+        });
+
+        //using jquery: in jquery you point to the element you want to work with
+        jQuery("#btn_somarjq").click(()=>{
+            let v1=parseInt(jQuery("#v1").val());
+            let v2=parseInt(jQuery("#v2").val())
+            let soma=v1+v2;
+            jQuery("#res").val(soma);
+        });
+
+    </script>
+</html>

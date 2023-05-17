@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <style>
+        #bloco{
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="bloco"></div>
+    <p id="txt"></p>
+
+    <script>
+/*         //adicionando o método on para usar mais de um evento dentro de um componente.
+        jQuery("#bloco").on("click dblclick", ()=>{
+            jQuery("#txt").text("Ocorreu um clico no bloco.");
+        }) */
+
+        //adicionando vários eventos que tenham comportamentos de rotinas diferentes.
+        jQuery("#bloco").on({
+            click:()=>{
+                jQuery("#txt").text("Clique no bloco.");
+            },
+            mouseenter:()=>{
+                jQuery("#txt").text("Mouse sobre o bloco");
+            },
+            mouseleave:()=>{
+                jQuery("#txt").text("Mouse fora do bloco.");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

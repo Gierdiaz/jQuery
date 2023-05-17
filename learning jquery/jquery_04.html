@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <label for="">Digite seu nome: </label>
+    <input type="text" id="nome">
+    <p id="txt"></p>
+
+    <script>
+        //adicionando um evento digitado no teclado.
+        jQuery("#nome").keyup(()=>{
+            //tag P está recebendo o conteúdo/valor do input digitado.
+            jQuery("#txt").text(jQuery("#nome").val());
+        })
+    </script>
+
+</body>
+
+</html>

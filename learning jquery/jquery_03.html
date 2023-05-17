@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <style>
+        #bloco{
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="bloco"></div>
+    
+    <p id="txt"></p>
+
+    <script>
+        jQuery("#txt").text("Estudando eventos em jquery.");
+
+        //trabalhando com eventos.
+        //adicionando um evento de click no bloco.
+        //click é um método e todo método é necessário passar uma função de callback.
+        jQuery("bloco").mouseenter(()=>{
+            jQuery("#txt").text("Mouse sobre o bloco");
+        });
+        jQuery("#blooc").mousemove(()=>{
+            jQuery("#txt").text("Movendo sobre o bloco.");
+        });
+        jQuery("#bloco").click(()=>{
+            jQuery("#txt").text("Alterando o texto da tag parágrafo.");  
+        });
+        jQuery("#bloco").mouseleave(()=>{
+            jQuery("#txt").text("Mouse está fora do bloco.");
+        });
+
+    </script>
+
+</body>
+
+</html>
